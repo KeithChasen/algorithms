@@ -56,3 +56,62 @@ function isPrimeB(n) {
     return true;
 }
 // Big-O O(sqrt(n))
+
+// Power of 2
+// give n determine if it's a power of 2
+function isPowerOfTwo(n) {
+    if (n < 1) {
+        return false;
+    }
+
+    while (n > 1) {
+        if (n % 2 !== 0) {
+            return false;
+        }
+        n = n/2;
+    }
+    return true;
+}
+
+// console.log(isPowerOfTwo(1)); // true since it's 2 pow 0
+// console.log(isPowerOfTwo(2)); // true since it's 2 pow 1
+// console.log(isPowerOfTwo(5)); // false
+
+// Big-O = O(log n) because on each iteration of a loop value of n is twice smaller than previous
+
+// Power of 2 BIT WISE
+// give n determine if it's a power of 2
+function isPowerOfTwoBitWise(n) {
+    if (n < 1) {
+        return false;
+    }
+
+    return (n & (n - 1)) === 0;
+}
+// Big-O = O(1) because it's a one liner
+
+// 0 0 0 0 - 0
+// 0 0 0 1 - 1
+// 0 0 1 0 - 2
+// 0 0 1 1 - 3
+// 0 1 0 0 - 4
+// 0 1 0 1 - 5
+
+// bitwise & -> true if both items true
+
+// isPowerOfTwo(4) ->
+// 0 0 1 1 - 3
+// 0 1 0 0 - 4
+
+// 0 0 0 0 
+
+// isPowerOfTwo(5) ->
+// 0 1 0 0 - 4
+// 0 1 0 1 - 5
+
+// 0 1 0 0 
+
+
+// console.log(isPowerOfTwoBitWise(1)); // true 
+// console.log(isPowerOfTwoBitWise(2)); // true
+// console.log(isPowerOfTwoBitWise(5)); // false
