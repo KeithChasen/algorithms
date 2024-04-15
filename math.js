@@ -13,3 +13,15 @@ function fibonacci(n) {
 // Bid-O = O(n)
 
 // console.log(fibonacci(2)); // [0,1]
+
+// Factorial
+function factorial(n) {
+    let result = 1;
+    for (let i = 2; i<=n; i++) {
+        result = result * i;
+    }
+    return result;
+}
+
+// Bid-O = O(n)
+
