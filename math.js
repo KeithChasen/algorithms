@@ -25,3 +25,34 @@ function factorial(n) {
 
 // Bid-O = O(n)
 
+// Prime Number
+// given natural number > 1 and can be divided only by itself
+function isPrime(n) {
+    if (n < 2) {
+        return false;
+    }
+    for (let i = 2; i < n; i++) {
+        if (n % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+// Big-O O(n)
+
+//BETTER ALGO FOR with square root
+// because if it's dividable by 2 we shouldn't care if it's
+// dividable by 4 
+// Prime Number
+function isPrimeB(n) {
+    if (n < 2) {
+        return false;
+    }
+    for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+// Big-O O(sqrt(n))
