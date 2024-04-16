@@ -115,3 +115,25 @@ function isPowerOfTwoBitWise(n) {
 // console.log(isPowerOfTwoBitWise(1)); // true 
 // console.log(isPowerOfTwoBitWise(2)); // true
 // console.log(isPowerOfTwoBitWise(5)); // false
+
+// Recursive Fibonacci
+// find N item of fibonacci
+function recursiveFibonacci(n) {    
+    // F(n) = F(n-1) + F(n-2)
+    // F(1) = 0
+    // F(2) = 1
+    if (n < 2) {
+        return n;
+    }
+
+    return recursiveFibonacci(n-1) + recursiveFibonacci(n-2);
+}
+
+console.log(recursiveFibonacci(6), 'result');
+
+// O(n) - was for iterative solution
+// O(2^n) 
+    // because for each item we calculate 2 items
+    // for 2 -> 4
+    // 4 -> 8
+    // 8 -> 16
