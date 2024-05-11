@@ -129,7 +129,7 @@ function recursiveFibonacci(n) {
     return recursiveFibonacci(n-1) + recursiveFibonacci(n-2);
 }
 
-console.log(recursiveFibonacci(6), 'result');
+// console.log(recursiveFibonacci(6), 'result');
 
 // O(n) - was for iterative solution
 // O(2^n) 
@@ -137,3 +137,14 @@ console.log(recursiveFibonacci(6), 'result');
     // for 2 -> 4
     // 4 -> 8
     // 8 -> 16
+
+// Recursive Factorial
+function factorialRecursive(n) {
+    if (n > 0) {
+        return n * factorialRecursive(n - 1);
+    }
+
+    return 1;
+}
+
+console.log(factorialRecursive(5));
