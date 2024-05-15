@@ -38,3 +38,28 @@ employees.push(employeeFactory.create('Stan', 2));
 
 employees.forEach(e => e.say());
 
+// Iterator
+class Iterator {
+    items;
+    index;
+
+    constructor(items, index) {
+        this.items = items;
+        this.index = index;
+    }
+
+    hasNext() {
+        return this.index < this.items.length;
+    }
+
+    next() {
+        return this.items[this.index++];
+    }
+}
+
+const items = [1, 'keith', false, 1.33];
+
+const iterator = new Iterator(items, 0);
+
+while(iterator.hasNext())
+    console.log(iterator.next());
