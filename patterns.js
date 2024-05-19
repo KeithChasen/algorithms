@@ -63,3 +63,4 @@ const iterator = new Iterator(items, 0);
 
 while(iterator.hasNext())
     console.log(iterator.next());
+
